@@ -21,7 +21,7 @@ const createCurrentUser = async (req: Request, res: Response) => {
     //create the user if it doesn't exist
     // return the user object to the calling client
 try {
-    const {auth0Id} = req.body;
+    const  {auth0Id} = req.body;
     const existingUser = await User.findOne ({auth0Id})
 
     if (existingUser) {
