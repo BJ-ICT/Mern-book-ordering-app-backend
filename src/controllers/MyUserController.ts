@@ -16,7 +16,7 @@ const getCurrentUser= async(req: Request, res: Response) => {
     }
 }
 
-const createCurrentUser = async (req: Request, res: Response) => {
+const  createCurrentUser = async (req: Request, res: Response) => {
     // check if the user exists
     //create the user if it doesn't exist
     // return the user object to the calling client
