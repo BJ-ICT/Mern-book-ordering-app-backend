@@ -14,15 +14,23 @@ const upload  = multer({
         fileSize : 5 * 1024 * 1024, // 5mb
     },
 });
-// Get /api/my/restaurant
-router.get("/", jwtCheck, jwtParse, MyBookStoreController.getMyBookStore)
+// Get /api/my/bookstore
+router.get("/", jwtCheck, jwtParse, MyBookStoreController.getMyBookStore);
 
 // /api/my/bookstore
 
-router.post ("/",validateMyBookStoreRequest,jwtCheck, jwtParse, upload.single("imageFile"),
-MyBookStoreController.createMyBookStore);
+router.post ("/",
+    upload.single("imageFile") ,
+    validateMyBookStoreRequest,
+    jwtCheck, 
+    jwtParse, 
+    MyBookStoreController.createMyBookStore);
 
-router.put ("/",validateMyBookStoreRequest,jwtCheck, jwtParse, upload.single("imageFile"),
-MyBookStoreController.updateMyBookStore)
+router.put ("/",
+    upload.single("imageFile") ,
+    validateMyBookStoreRequest,
+    jwtCheck, 
+    jwtParse, 
+    MyBookStoreController.updateMyBookStore)
 
 export default router;

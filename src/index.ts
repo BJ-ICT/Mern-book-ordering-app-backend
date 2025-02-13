@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import myUserRoute from "./routes/MyUserRoutes";
 import {v2 as cloudinary} from "cloudinary";
 import MyBookStoreRoute from "./routes/MyBookStoreRoute";
+import bookStoreRoutes from "./routes/BookStoreRoute"
 
 //setting entry point to connect database
  mongoose
@@ -33,7 +34,7 @@ app.get("/health",async (_req: Request, res: Response)=> {
  // send requests and show respose. this is come from express.
 app.use ("/api/my/user", myUserRoute);
 app.use ("/api/my/bookstore",MyBookStoreRoute);
-
+app.use ("/api/bookstore",bookStoreRoutes)
 
 
  app.listen (7000, ()=> {

@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import Bookstore from "../models/bookstore";
 import cloudinary from "cloudinary";
 import mongoose from "mongoose";
-import bookstore from "../models/bookstore";
+
 
 const getMyBookStore = async ( req: Request, res: Response ) => {
     try {
