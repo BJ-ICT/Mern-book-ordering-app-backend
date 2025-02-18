@@ -27,7 +27,7 @@ const createMyBookStore = async (req: Request, res: Response) => {
 
 
         if (existingBookStore) {
-            return res .status (409) .json({message: "User BookStore already exist"});
+            return res .status (409) . json({message: "User BookStore already exist"});
         }
         // Some weired code set. Creating Base64 string base on the image buffer. Which is somthing that explain about the image
       // const image = req.file as Express.Multer.File;
