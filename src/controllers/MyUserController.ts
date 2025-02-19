@@ -8,7 +8,7 @@ const getCurrentUser= async(req: Request, res: Response) => {
         return res.status (404).json ({message: "User Not Found"});
       }
 
-      res.json(currentUser);
+      res.json(currentUser) ;
 
     } catch (error) {
         console.log(error);
