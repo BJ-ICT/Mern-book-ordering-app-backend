@@ -13,10 +13,11 @@
   "description": "",
   "dependencies": {
     "@types/multer": "^1.4.12",
+    "bcryptjs": "^3.0.2",
     "cloudinary": "^2.5.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "express-oauth2-jwt-bearer": "^1.6.0",
     "express-validator": "^7.2.0",
     "jsonwebtoken": "^9.0.2",
