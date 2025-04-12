@@ -37,7 +37,7 @@ const searchBookStore= async (req: Request, res: Response) => {
         // categeories = [fiction, noval, fantacy]
         // searchQuery = Noval
 
-        const searchRegex = new RegExp (searchQuery, "i");
+        const searchRegex = new RegExp ( searchQuery, "i");
         query ["$or"] = [
             {bookStoreName: searchRegex},
             {categeories: {$in: [searchRegex]}},
@@ -50,7 +50,7 @@ const searchBookStore= async (req: Request, res: Response) => {
        const bookstore = await BookStore.find(query)
        .sort ({[sortOption]: 1 })
        .skip(skip)
-       .limit(pageSize)
+       .limit (pageSize) 
        .lean();
 
        const total = await BookStore.countDocuments(query);

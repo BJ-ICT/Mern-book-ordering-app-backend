@@ -34,7 +34,7 @@ app.get("/health",async (_req: Request, res: Response)=> {
  // send requests and show respose. this is come from express.
 app.use ("/api/my/user", myUserRoute);
 app.use ("/api/my/bookstore",MyBookStoreRoute);
-app.use ("/api/bookstore",bookStoreRoutes)
+app.use ("/api/bookstore",bookStoreRoutes);
 
 
  app.listen (7000, ()=> {
