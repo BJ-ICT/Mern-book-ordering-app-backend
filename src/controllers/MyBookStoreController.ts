@@ -39,7 +39,7 @@ const createMyBookStore = async (req: Request, res: Response) => {
       // commented above line, because it used before as a quick reference
       //in case the code does not work 
 
-      const imageUrl =  await uploadImage (req.file as Express.Multer.File)
+      const imageUrl =  await uploadImage (req.file as Express.Multer.File);
 
         const bookstore = new Bookstore (req.body);
         bookstore.imageUrl = imageUrl;
@@ -82,6 +82,7 @@ const updateMyBookStore = async (req: Request, res: Response) => {
     res.status(200).send(bookstore);
 
   } catch (error) {
+    console.log("error",error);
     res.status(500).json ({message:"Something went wrong"});
   }
 };
