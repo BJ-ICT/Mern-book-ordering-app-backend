@@ -6,6 +6,8 @@ import myUserRoute from "./routes/MyUserRoutes";
 import {v2 as cloudinary} from "cloudinary";
 import MyBookStoreRoute from "./routes/MyBookStoreRoute";
 import bookStoreRoutes from "./routes/BookStoreRoute"
+import MyUserRoutes from "./routes/MyUserRoutes";
+import BookStoreRoute from "./routes/BookStoreRoute";
 
 //setting entry point to connect database
  mongoose
@@ -25,16 +27,12 @@ cloudinary.config ({
  app.use(express.json());
  app.use(cors());
 
-app.get("/health",async (_req: Request, res: Response)=> {
-   res.send({message: "Heath OK!"});
-});
-
 
 
  // send requests and show respose. this is come from express.
-app.use ("/api/my/user", myUserRoute);
+app.use ("/api/my/user", MyUserRoutes);
 app.use ("/api/my/bookstore",MyBookStoreRoute);
-app.use ("/api/bookstore",bookStoreRoutes);
+app.use ("/api/bookstore",BookStoreRoute);
 
 
  app.listen (7000, ()=> {

@@ -1,11 +1,11 @@
 import { ObjectId } from "mongodb";
-import mongoose from "mongoose";
+import mongoose, { Types } from "mongoose";
 
 const userSchema = new mongoose.Schema ({
-    _id: ObjectId,
-    auth0Id: {
-        type: String,
-        required: true,
+    _id: {
+        type: Types.ObjectId,
+        default: () => new Types.ObjectId(),
+      
     },
     email:{
         type: String,

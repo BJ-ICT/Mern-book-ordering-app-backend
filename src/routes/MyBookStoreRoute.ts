@@ -1,7 +1,7 @@
 import express from "express";
 import multer from "multer";
 import MyBookStoreController from "../controllers/MyBookStoreController";
-import jwtCheck, { jwtParse } from "../middleware/auth";
+import { jwtCheck, jwtParse } from "../middleware/auth";
 import { validateMyBookStoreRequest } from "../middleware/validation";
 
 
